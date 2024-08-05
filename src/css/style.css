@@ -78,9 +78,6 @@ section .list .item .car-img img {
     transform: rotate(-30deg);
 }
 
-
-
-
 section .list .item .content {
     position: absolute;
     right: 100px;
