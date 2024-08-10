@@ -53,12 +53,16 @@ section .list .item {
     inset: 0;
 }
 
+
 section .list .item .car-img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 70%;
 }
+
+
+
 section .list .item .car-img::before {
     content: '';
     position: absolute;
