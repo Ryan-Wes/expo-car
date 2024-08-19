@@ -21,14 +21,14 @@ header h1 {
     font-size: 50px;
 }
 
-header nav ul{
+header nav ul {
     display: grid;
     grid-template-columns: repeat(3, 200px);
 }
 
 section {
     background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,44,50,1) 86%, rgba(32,75,80,1) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, hsl(187, 100%, 10%) 86%, rgba(32,75,80,1) 100%);
     height: 100vh;
     position: relative;
 }
@@ -54,15 +54,12 @@ section .list .item {
     inset: 0;
 }
 
-
 section .list .item .car-img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 70%;
+    width: 600px;
 }
-
-
 
 section .list .item .car-img::before {
     content: '';
@@ -74,12 +71,10 @@ section .list .item .car-img::before {
     left: 50px;
     border: 50%;
     filter: blur(50px);
-
 }
 
-
 section .list .item .car-img img {
-    width: 80%;
+    width: 90%;
     transform: rotate(-30deg);
 }
 
@@ -97,12 +92,20 @@ section .list .item .content {
 
 section .list .item .content .car-information {
     font-weight: bold;
+    transform: translateX(200px);
+    transition: 0.7s;
+    transition-delay: 0.3s;
+    opacity: 0;
 }
 
 section .list .item .content h2 {
     font-size: 8em;
     line-height: 1em;
     font-family: "League Gothic";
+    transform: translateX(200px);
+    transition: 0.7s;
+    transition-delay: 0.5s;
+    opacity: 0;
 }
 
 section .list .item .content .description {
@@ -110,6 +113,10 @@ section .list .item .content .description {
     font-size: 12px;
     text-align: right;
     max-width: 400px;
+    transform: translateX(200px);
+    transition: 0.7s;
+    transition-delay: 0.7s;
+    opacity: 0;
 }
 
 section .list .item .content .information {
@@ -117,11 +124,20 @@ section .list .item .content .information {
     height: 35px;
     width: 120px;
     text-transform: uppercase;
-    border: 2px solid #791fd3;
+    border: 2px solid #000E10;
     background-color: #beff1b;
     color: #000;
     cursor: pointer;
     font-weight: bold;
+    transform: translateX(200px);
+    transition: 0.7s;
+    transition-delay: 0.9s;
+    opacity: 0;
+}
+
+section .list .item .content .information:hover {
+    border: 2px solid #7ab5be;
+    background-color: #000E10;
 }
 
 section .arrows {
@@ -143,14 +159,13 @@ section .arrows button {
     cursor: pointer;
 }
 
-
 section .arrows button img {
     width: 30px;
     margin-top: 4px;
     cursor: pointer;
 }
 
-section .arrows button:nth-child(1) img{
+section .arrows button:nth-child(1) img {
     transform: scale(-1);
 }
 
@@ -160,7 +175,7 @@ section .arrows button:hover {
 
 section .indicators {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translateX(-50%);
     height: 200px;
@@ -193,49 +208,44 @@ section ul .active {
     background-color: #fff;
 }
 
-
-section .list .item{
+section .list .item {
     transform: translateX(100vw);
     transition: 0.5s;
     opacity: 0;
 }
 
-section .list .item .car-img img{
+section .list .item .car-img img {
     transform: rotate(0);
     transition: 0.5s;
     transition-delay: 0.3s;
 }
 
-section .list .item .content .car-information, h2, .description, .information{
-    transform: translateX(200px);
-    transition: 0.7s;
-    transition-delay: 0.3s;
-    opacity: 0;
-}
-
-section .list .item .content h2 {
-    transition-delay: 0.5s;
-}
-
-section .list .item .content .description {
-    transition-delay: 0.7s;
-}
-
-section .list .item .content .information {
-    transition-delay: 0.9s;
-}
-
-section .list .active {
+section .list .item.active {
     transform: translateX(0);
     transition: 0.5s;
     opacity: 1;
 }
 
-section .list .item.active .car-img img{
+section .list .item.active .car-img img {
     transform: rotate(-20deg);
 }
 
-section .list .item.active .content .car-information, h2, .description, .information{
+section .list .item.active .content .car-information {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+section .list .item.active .content h2 {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+section .list .item.active .content .description {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+section .list .item.active .content .information {
     transform: translateX(0);
     opacity: 1;
 }
