@@ -129,15 +129,15 @@ section .list .item .content .information {
     color: #000;
     cursor: pointer;
     font-weight: bold;
-    transform: translateX(200px);
+    /* transform: translateX(200px);
     transition: 0.7s;
     transition-delay: 0.9s;
-    opacity: 0;
+    opacity: 0; */
+    
 }
 
 section .list .item .content .information:hover {
-    border: 2px solid #7ab5be;
-    background-color: #000E10;
+    color: #fff;
 }
 
 section .arrows {
@@ -245,9 +245,9 @@ section .list .item.active .content .description {
     opacity: 1;
 }
 
-section .list .item.active .content .information {
+/* section .list .item.active .content .information {
     transform: translateX(0);
     opacity: 1;
-}
+} */
 
 
