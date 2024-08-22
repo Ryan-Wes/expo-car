@@ -130,6 +130,15 @@
 /* a partir daqui, deixar o carro em cima e a descrição embaixo dele */
 @media (max-width: 660px) {
 
+    header {
+        gap: 30%;
+    }
+
+    header nav ul {
+        display: flex;
+        gap: 30px;
+        font-size: 12px;
+    }
 
     /* Transformando a estrutura em coluna */
     .item {
@@ -148,20 +157,37 @@
     section .list .item .content .car-information {
         position: absolute;
         top: 70px;
+        left: 50%;
+        /* Centraliza o elemento horizontalmente */
+        transform: translateX(-50%);
+        /* Ajusta a posição relativa à centralização */
+        text-align: end;
+        width: 39%;
     }
 
     section .list .item .content h2 {
-        font-size: 3em;
+        font-size: 2.5em;
+        /* Reduz o tamanho da fonte */
         position: absolute;
         top: 200px;
-
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        white-space: nowrap;
+        /* Impede a quebra de linha */
+        padding: 0;
+        /* Remove qualquer padding extra */
+        margin: 0;
+        /* Remove qualquer margin extra */
     }
 
     section .list .item .content .description {
+        position: absolute;
         font-size: 12px;
-        padding-top: 320px;
-        width: 80%;
-        /* Ajuste a largura conforme necessário */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 350px;
+        padding-top: 300px;
         text-align: end;
     }
 
@@ -172,6 +198,23 @@
         /* Ajuste conforme necessário */
         z-index: 4;
         /* Garante que o botão fique acima de todos os elementos */
+    }
+
+    section .list .item .content .information {
+        position: absolute;
+        top: 85%;
+        /* Coloca o information abaixo dos indicadores */
+        left: 80%;
+        transform: translateX(0%);
+        text-align: center;
+    }
+
+    section .indicators {
+        top: 70%;
+        /* Ajusta a posição dos indicadores */
+        left: 50%;
+        /* Centraliza os indicadores */
+        transform: translateX(-50%);
     }
 }
 
@@ -233,7 +276,11 @@
 
     section .list .item .content .information {
         position: absolute;
-        bottom: 100px;
+        top: 82%;
+        /* Coloca o information abaixo dos indicadores */
+        left: 110%;
+        transform: translateX(0%);
+        text-align: center;
     }
 
     section .indicators {
@@ -251,7 +298,7 @@
         position: absolute;
         top: 86%;
         /* Coloca o information abaixo dos indicadores */
-        left: 50%;
+        left: 115%;
         transform: translateX(0%);
         text-align: center;
     }
@@ -321,9 +368,9 @@
 
     section .list .item .content .information {
         position: absolute;
-        top: 85%;
+        top: 83%;
         /* Coloca o information abaixo dos indicadores */
-        left: 50%;
+        left: 95%;
         transform: translateX(0%);
         text-align: center;
     }
