@@ -5,8 +5,8 @@
 
     section .list .item .content h2 {
         font-size: 100px;
-        padding-bottom: 0px;
-    }    
+        padding-bottom: 20px;
+    }
 
     section .list .item .content .description {
         max-width: 300px;
@@ -17,17 +17,17 @@
         transform: rotate(-30deg);
     }
 
-    
+
 }
 
 @media (max-width: 1220px) {
     header h1 {
         font-size: 200%;
     }
-    
+
     section .list .item .content h2 {
         font-size: 5em;
-    }    
+    }
 
     section .list .item .content .description {
         font-size: 10px;
@@ -44,11 +44,11 @@
     header {
         gap: 30%;
     }
-    
+
     section .list .item .content h2 {
         font-size: 4em;
         padding-top: 70px;
-    }    
+    }
 
     section .list .item .content .description {
         font-size: 10px;
@@ -73,12 +73,12 @@
     section .list .item .content .car-information {
         padding-top: 100px;
     }
-    
+
     section .list .item .content h2 {
         font-size: 3em;
         padding-top: 0px;
-        
-    }    
+
+    }
 
     section .list .item .content .description {
         font-size: 10px;
@@ -100,12 +100,12 @@
     section .list .item .content .car-information {
         padding-top: 100px;
     }
-    
+
     section .list .item .content h2 {
         font-size: 3em;
         padding-top: 0px;
-        
-    }    
+
+    }
 
     section .list .item .content .description {
         font-size: 10px;
@@ -129,6 +129,8 @@
 
 /* a partir daqui, deixar o carro em cima e a descrição embaixo dele */
 @media (max-width: 660px) {
+
+
     /* Transformando a estrutura em coluna */
     .item {
         display: flex;
@@ -143,83 +145,198 @@
         padding-left: 70px;
     }
 
-    .car-information {
+    section .list .item .content .car-information {
         position: absolute;
         top: 70px;
     }
 
-    h2 {
+    section .list .item .content h2 {
         font-size: 3em;
         position: absolute;
         top: 200px;
 
     }
 
-    section .list .item .description {
+    section .list .item .content .description {
         font-size: 12px;
         padding-top: 320px;
-        width: 80%; /* Ajuste a largura conforme necessário */
+        width: 80%;
+        /* Ajuste a largura conforme necessário */
         text-align: end;
     }
 
-    .information {
-        order: 4; /* Coloca o botão abaixo da descrição */
-        margin-top: 10px; /* Ajuste conforme necessário */
-        z-index: 4; /* Garante que o botão fique acima de todos os elementos */
+    section .list .item .content .car-information {
+        order: 4;
+        /* Coloca o botão abaixo da descrição */
+        margin-top: 10px;
+        /* Ajuste conforme necessário */
+        z-index: 4;
+        /* Garante que o botão fique acima de todos os elementos */
     }
 }
 
 @media (max-width: 432px) {
 
+    header {
+        gap: 40px;
+    }
+
+    header nav ul {
+        display: flex;
+        gap: 30px;
+        font-size: 10px;
+    }
+
     section .list .item .car-img {
-        width: 110%;
+        width: 135%;
         padding-left: 40px;
     }
 
-    .car-information {
+    section .list .item .content .car-information {
         position: absolute;
         top: 70px;
     }
 
-    h2 {
+    section .list .item .content h2 {
         font-size: 3em;
         position: absolute;
         top: 200px;
-
     }
 
-    section .list .item .description {
+    section .list .item .content .description {
+        position: absolute;
         font-size: 12px;
-        padding-top: 320px;
-        width: 80%; /* Ajuste a largura conforme necessário */
+        left: 70%;
+        /* Centraliza o elemento horizontalmente */
+        transform: translateX(-50%);
+        /* Ajusta a posição relativa à centralização */
+        width: 350px;
+        /* Aumenta a largura para ocupar mais espaço lateral */
+        padding-top: 240px;
+        /* Ajusta o espaçamento vertical */
         text-align: end;
     }
 
-    .information {
-        order: 4; /* Coloca o botão abaixo da descrição */
-        margin-top: 10px; /* Ajuste conforme necessário */
-        z-index: 4; /* Garante que o botão fique acima de todos os elementos */
-    }
-    
     section .arrows button {
-        top: 60%;
+        top: 80%;
         width: 30px;
         height: 30px;
         border-radius: 50%;
         border: none;
         cursor: pointer;
     }
-    
+
     section .arrows button img {
         width: 20px;
         margin-top: 5.5px;
     }
 
+    section .list .item .content .information {
+        position: absolute;
+        bottom: 100px;
+    }
+
     section .indicators {
         top: 65%;
-}
+    }
 
     section .number {
-    font-size: 3em;
+        font-size: 3em;
+    }
 }
+
+@media (max-width: 394px) {
+
+    section .list .item .content .information {
+        position: absolute;
+        top: 86%;
+        /* Coloca o information abaixo dos indicadores */
+        left: 50%;
+        transform: translateX(0%);
+        text-align: center;
+    }
+}
+
+@media (max-width: 392px) {
+
+    header {
+        gap: 20px;
+    }
+
+    header nav ul {
+        display: flex;
+        gap: 25px;
+        font-size: 9px;
+    }
+
+    section .list .item .content .car-information {
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        /* Centraliza o elemento horizontalmente */
+        transform: translateX(-50%);
+        /* Ajusta a posição relativa à centralização */
+        text-align: center;
+    }
+
+    section .list .item .content h2 {
+        font-size: 2.5em;
+        /* Reduz o tamanho da fonte */
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        white-space: nowrap;
+        /* Impede a quebra de linha */
+        padding: 0;
+        /* Remove qualquer padding extra */
+        margin: 0;
+        /* Remove qualquer margin extra */
+    }
+
+    section .list .item .content .description {
+        position: absolute;
+        font-size: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 350px;
+        padding-top: 300px;
+        text-align: end;
+    }
+
+    section .arrows button {
+        top: 80%;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+    }
+
+    section .arrows button img {
+        width: 20px;
+        margin-top: 5.5px;
+    }
+
+    section .list .item .content .information {
+        position: absolute;
+        top: 85%;
+        /* Coloca o information abaixo dos indicadores */
+        left: 50%;
+        transform: translateX(0%);
+        text-align: center;
+    }
+
+    section .indicators {
+        top: 67%;
+        /* Ajusta a posição dos indicadores */
+        left: 50%;
+        /* Centraliza os indicadores */
+        transform: translateX(-50%);
+    }
+
+    section .number {
+        font-size: 3em;
+    }
 }
